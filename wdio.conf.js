@@ -68,8 +68,8 @@ exports.config = {
         platformName     : "Android",
         platformVersion  : "11",
         deviceName       : "emulator-5554",
-        app              : "app\ApiDemos-debug.apk",
-        noReset          : "True"
+        app              : "app/ApiDemos-debug.apk",
+        noReset          : "False"
     
     }],
     //
@@ -103,7 +103,8 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    //baseUrl: 'http://localhost',
+    baseUrl: 'http://127.0.0.1:4723',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -119,8 +120,8 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver','appium'],
-    
+    // services: ['chromedriver','appium'],
+    services: ['appium'],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
@@ -148,7 +149,7 @@ exports.config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.js'],
+        require: ['./features/step-definitions/*.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

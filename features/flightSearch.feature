@@ -3,12 +3,12 @@ Feature: Search available Flight Today
 Scenario Outline: As User, I want to search One Way trip
     Given User successfully login in traveloka app
     When User tap "Flight" menu
-    And User select location Origin <origin>
-    And User select location Destination <destination>
-    And User select Departure Date <date>
-    And User select total passenger <passenger>
-    And User select Seat Class <class>
-    And User tap "Search" button
+    When User select location Origin <origin>
+    When User select location Destination <destination>
+    When User select Departure Date <date>
+    When User select total passenger <passenger>
+    When User select Seat Class <class>
+    When User tap "Search" button
     Then App will display available flight schedule
 
     Examples:
@@ -18,13 +18,13 @@ Scenario Outline: As User, I want to search One Way trip
 Scenario Outline: As User, I want to search Round trip
     Given User successfully login in traveloka app
     When User tap "Flight" menu
-    And User select location Origin <origin>
-    And User select location Destination <destination>
-    And User select Departure Date <date>
-    And User select Round Trip
-    And User select total passenger <passenger>
-    And User select Seat Class <class>
-    And User tap "Search" button
+    When User select location Origin <origin>
+    When User select location Destination <destination>
+    When User select Departure Date <date>
+    When User select Round Trip
+    When User select total passenger <passenger>
+    When User select Seat Class <class>
+    When User tap "Search" button
     Then App will display available flight schedule
 
     Examples:
