@@ -21,6 +21,11 @@ When("User select Round Trip", () => {
 When(/^User select Departure Date (.*)$/, (arg0) => {
 
 });
+
+When(/^User select Return Date (.*)$/, (arg0) => {
+
+});
+
 When(/^User select total passenger (.*)$/, (arg0) => {
 
 });
