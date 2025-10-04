@@ -1,6 +1,5 @@
-
-
-const Page = require('./page');
+import { $ } from '@wdio/globals'
+import Page from './page.js';
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -9,15 +8,15 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername() {
+    get inputUsername () {
         return $('#username');
     }
 
-    get inputPassword() {
+    get inputPassword () {
         return $('#password');
     }
 
-    get btnSubmit() {
+    get btnSubmit () {
         return $('button[type="submit"]');
     }
 
@@ -34,9 +33,9 @@ class LoginPage extends Page {
     /**
      * overwrite specific options to adapt it to page object
      */
-    open() {
+    open () {
         return super.open('login');
     }
 }
 
-module.exports = new LoginPage();
+export default new LoginPage();

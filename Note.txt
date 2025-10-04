@@ -1,5 +1,0 @@
-// driver IO
-npm install webdriverio -g
-
-// test runner
-npx wdio run wdio.conf.js
