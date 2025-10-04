@@ -1,5 +1,6 @@
 This is my Personal WDIO mobile automation android test
 npm init wdio@latest . -- --yes
+
 # run all test
 npx wdio run ./wdio.conf.js
 
